@@ -7,6 +7,14 @@
 
 import os
 
+def to_usd(my_price): 
+    """
+    Docstring will display an integer in USD format.
+    Invoke like this: to_usd(0.000)
+    """
+    return '${:,.2f}'.format(my_price)
+
+
 # checks to see if a products.csv file exists. If not, it uses the default
 if os.path.isfile(os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")) == True:
     print("USING CUSTOM PRODUCTS CSV FILE...")
@@ -33,7 +41,7 @@ print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
 for p in products:
-    print("..." + p["name"] + "   " + '${:,.2f}'.format(p["price"]))
+    print("..." + p["name"] + "   " + to_usd(p['price']))
 
 
 all_prices = []
@@ -44,7 +52,7 @@ import statistics
 avg_price = statistics.median(all_prices)
 
 print("---------")
-print("AVERAGE PRICE:", '${:,.2f}'.format(avg_price))
+print("AVERAGE PRICE:", to_usd(avg_price))
 
 
 
