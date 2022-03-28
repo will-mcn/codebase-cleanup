@@ -45,3 +45,22 @@ Run the game:
 ```sh
 python app/game.py
 ```
+
+
+Run the groceries reciept:
+
+```sh
+python -m app.groceries
+```
+
+Run the crypto dashboard:
+
+```sh
+python -m app.crypto
+```
+
+Run the stocks dashboard:
+
+```sh
+python -m app.stocks
+```
