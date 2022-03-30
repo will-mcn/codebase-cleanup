@@ -3,6 +3,7 @@
 print("STOCKS REPORT...")
 
 import os
+from app.utils import to_usd
 from dotenv import load_dotenv
 from pandas import read_csv
 
@@ -22,4 +23,4 @@ latest = df.iloc[0]
 print(symbol)
 print(latest["timestamp"])
 print(latest["close"])
-print('${:,.2f}'.format(latest["close"]))
+print(to_usd(latest["close"]))

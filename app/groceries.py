@@ -7,12 +7,7 @@
 
 import os
 
-def to_usd(my_price): 
-    """
-    Docstring will display an integer in USD format.
-    Invoke like this: to_usd(0.000)
-    """
-    return '${:,.2f}'.format(my_price)
+from app.utils import to_usd
 
 
 # checks to see if a products.csv file exists. If not, it uses the default
