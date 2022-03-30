@@ -46,7 +46,6 @@ Run the game:
 python app/game.py
 ```
 
-
 Run the groceries reciept:
 
 ```sh
